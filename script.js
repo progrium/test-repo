@@ -4,8 +4,8 @@ function onPush(github, event, cb) {
     cb();
   }
   github.pullRequests.getAll({
-    user: event.repo.owner.login,
-    repo: event.repo.name,
+    user: event.repository.owner.login,
+    repo: event.repository.name,
     base: "master"
     
   }, function(err, res) {
