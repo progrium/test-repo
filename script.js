@@ -12,8 +12,13 @@ function onPush(github, event, cb) {
     base: "master"
     
   }, function(err, res) {
+    if (err) {
+      console.log(err.message);
+      cb();
+      return;
+    }
     console.log("Got PRs...");
-    console.log(err.message);
+    console.log(JSON.stringify(res));
     cb();
   });
 }
