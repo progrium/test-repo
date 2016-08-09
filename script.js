@@ -13,7 +13,7 @@ function onPush(github, event, cb) {
     
   }, function(err, res) {
     console.log("Got PRs...");
-    console.log(typeof err);
+    console.log(err.message);
     cb();
   });
 }
