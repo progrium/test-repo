@@ -10,6 +10,6 @@ function onPush(github, event, cb) {
     
   }, function(err, res) {
     console.log(JSON.stringify(res));
+    cb();
   });
-  cb();
 }
