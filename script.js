@@ -7,7 +7,7 @@ function onPush(github, event, cb) {
   }
   console.log("Fetching PRs...");
   github.pullRequests.getAll({
-    user: event.repository.owner.login,
+    user: event.repository.owner.name,
     repo: event.repository.name,
     base: "master"
     
