@@ -1,5 +1,7 @@
 const Promise = require("bluebird");
 
+// inserting a comment
+
 const pleaseRebase = "Please rebase your PR, thanks!";
 
 function onPush(github, event, cb) {
